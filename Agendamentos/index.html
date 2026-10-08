@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare - Agendamento</title>
+    <link rel="stylesheet" href="style Agendamento.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            🐾 PetCare
+        </div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#agendamento">Agendamento</a>
+            <a href="#consultas">Consultas</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero" id="inicio">
+            <div>
+                <span class="badge">🐶 Cuidado que seu pet merece</span>
+                <h1>Agende um horário para o seu melhor amigo.</h1>
+                <p>
+                    Banho, tosa, consulta veterinária e muito mais.
+                    Escolha o serviço, a data e o horário.
+                </p>
+
+                <a href="#agendamento" class="btn">
+                    Agendar agora
+                </a>
+            </div>
+
+            <div class="hero-icon">
+                🐕
+            </div>
+        </section>
+
+        <section class="section" id="agendamento">
+
+            <div class="section-title">
+                <span>📅</span>
+                <div>
+                    <h2>Novo agendamento</h2>
+                    <p>Preencha os dados abaixo.</p>
+                </div>
+            </div>
+
+            <form id="formAgendamento">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="tutor">Nome do tutor</label>
+                        <input
+                            type="text"
+                            id="tutor"
+                            placeholder="Digite seu nome"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input
+                            type="tel"
+                            id="telefone"
+                            placeholder="(00) 00000-0000"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pet">Nome do pet</label>
+                        <input
+                            type="text"
+                            id="pet"
+                            placeholder="Nome do seu pet"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="animal">Tipo de animal</label>
+                        <select id="animal" required>
+                            <option value="">Selecione</option>
+                            <option value="Cachorro">🐶 Cachorro</option>
+                            <option value="Gato">🐱 Gato</option>
+                            <option value="Coelho">🐰 Coelho</option>
+                            <option value="Outro">🐾 Outro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="servico">Serviço</label>
+                        <select id="servico" required>
+                            <option value="">Selecione o serviço</option>
+                            <option value="Consulta veterinária">
+                                🩺 Consulta veterinária
+                            </option>
+                            <option value="Banho">
+                                🛁 Banho
+                            </option>
+                            <option value="Banho e Tosa">
+                                ✂️ Banho e tosa
+                            </option>
+                            <option value="Tosa">
+                                ✂️ Tosa
+                            </option>
+                            <option value="Vacinação">
+                                💉 Vacinação
+                            </option>
+                            <option value="Avaliação">
+                                ❤️ Avaliação
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="data">Data</label>
+                        <input
+                            type="date"
+                            id="data"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="horario">Horário</label>
+                        <select id="horario" required>
+                            <option value="">Escolha uma data primeiro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="observacao">Observações</label>
+                        <input
+                            type="text"
+                            id="observacao"
+                            placeholder="Alguma observação?"
+                        >
+                    </div>
+
+                </div>
+
+                <button type="submit" class="btn btn-full">
+                    Confirmar agendamento
+                </button>
+
+            </form>
+
+            <div id="mensagem"></div>
+
+        </section>
+
+
+        <section class="section consultas" id="consultas">
+
+            <div class="section-title">
+                <span>📋</span>
+                <div>
+                    <h2>Meus agendamentos</h2>
+                    <p>Confira os horários cadastrados.</p>
+                </div>
+            </div>
+
+            <div id="listaConsultas" class="lista-consultas">
+                <!-- Agendamentos aparecem aqui -->
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>🐾 PetCare © 2026 - Cuidando de quem você ama.</p>
+    </footer>
+
+    <script src="script Agendamento.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,250 @@
+/* =========================================
+   PRODUTOS DA LOJA
+========================================= */
+
+.precos-loja {
+    width: 100%;
+
+    padding: 70px 20px;
+
+    /* Azul bebê bem suave */
+    background-color: #eaf7ff;
+
+    text-align: center;
+}
+
+.precos-loja h2 {
+    color: #4aa9d8;
+
+    font-size: 36px;
+
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    color: #64808f;
+
+    font-size: 17px;
+
+    margin-bottom: 40px;
+}
+
+
+/* =========================================
+   CONTAINER DOS PRODUTOS
+========================================= */
+
+.produtos-container {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    text-align: left;
+}
+
+
+/* =========================================
+   CARD DO PRODUTO
+========================================= */
+
+.produto-card {
+    background-color: #ffffff;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 15px rgba(67, 160, 202, 0.15);
+
+    border: 1px solid #d5effc;
+
+    transition: 0.3s;
+}
+
+.produto-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 10px 25px rgba(67, 160, 202, 0.25);
+
+    border-color: #a9ddf5;
+}
+
+
+/* =========================================
+   IMAGEM
+========================================= */
+
+.produto-card img {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =========================================
+   INFORMAÇÕES
+========================================= */
+
+.produto-info {
+    padding: 22px;
+}
+
+.categoria-produto {
+    display: inline-block;
+
+    color: #3b9dcc;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+
+    background-color: #e0f5ff;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+}
+
+.produto-info h3 {
+    color: #31566a;
+
+    font-size: 20px;
+
+    margin-bottom: 10px;
+}
+
+.produto-info p {
+    color: #6b8491;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   PREÇO
+========================================= */
+
+.produto-info strong {
+    display: block;
+
+    color: #3197c9;
+
+    font-size: 22px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   BOTÃO
+========================================= */
+
+.btn-produto {
+    display: block;
+
+    width: 100%;
+
+    padding: 12px;
+
+    background-color: #6fc4e8;
+
+    color: white;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 4px 10px rgba(111, 196, 232, 0.25);
+}
+
+.btn-produto:hover {
+    background-color: #429fc9;
+
+    box-shadow:
+        0 6px 15px rgba(66, 159, 201, 0.30);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   DETALHE AZUL BEBÊ
+========================================= */
+
+.produto-card::before {
+    content: "";
+
+    display: block;
+
+    height: 4px;
+
+    background: linear-gradient(
+        90deg,
+        #b9e8fa,
+        #6fc4e8,
+        #b9e8fa
+    );
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .produtos-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    .precos-loja {
+        padding: 50px 15px;
+    }
+
+    .precos-loja h2 {
+        font-size: 29px;
+    }
+
+    .produtos-container {
+        grid-template-columns: 1fr;
+    }
+
+    .produto-card img {
+        height: 230px;
+    }
+
+}
